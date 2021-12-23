@@ -82,7 +82,8 @@ const filterOptions = [
   { label: "All Recipes", value: "all" },
   { label: "Soups", value: "soup" },
   { label: "Dips and Sauces", value: "dip sauce" },
-  { label: "Saland and Vegetables", value: "salad vegetable" },
+  { label: "Salad and Vegetables", value: "salad vegetable" },
+  { label: "Mains", value: "mains" },
   { label: "Breads", value: "bread" },
   { label: "Desserts", value: "dessert" },
 ];
@@ -110,6 +111,9 @@ function FilterSelect({ value, onChange }) {
 }
 
 function RecipeList({ recipes, setShowRecipe, scrollRef }) {
+  if (!recipes.length) {
+    return <p>No recipes found</p>;
+  }
   return (
     <div className="RecipeList" ref={scrollRef}>
       {recipes.map((recipe, index) => (
