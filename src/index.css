@@ -84,6 +84,9 @@ body,
 .RecipeList {
   overflow-y: scroll;
   flex-grow: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .RecipeCard {

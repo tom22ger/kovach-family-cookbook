@@ -4,9 +4,14 @@ import Banner from "./assets/kfc-banner.svg";
 import SearchIcon from "./assets/search.svg";
 import ArrowBackIcon from "./assets/arrow-back.svg";
 
-import RECIPES from "./recipes.json";
+import RECIPES_JSON from "./recipes.json";
 
 import "./App.css";
+
+const RECIPES = RECIPES_JSON.map((recipe, index) => ({
+  ...recipe,
+  id: index,
+}));
 
 function App() {
   const scrollRef = useRef();
@@ -14,8 +19,7 @@ function App() {
   const [showSearchDialog, setShowSearchDialog] = useState(false);
   const [showRecipe, setShowRecipe] = useState(null);
 
-  const recipes = RECIPES;
-  const filteredRecipes = filterRecipes(recipes, filterValue);
+  const filteredRecipes = filterRecipes(RECIPES, filterValue);
 
   return (
     <div className="App">
@@ -34,13 +38,13 @@ function App() {
       {showSearchDialog && (
         <SearchDialog
           closeDialog={() => setShowSearchDialog(false)}
-          recipes={recipes}
+          recipes={RECIPES}
           setShowRecipe={setShowRecipe}
         />
       )}
       <RecipeDialog
         closeDialog={() => setShowRecipe(null)}
-        recipe={showRecipe !== null ? recipes[showRecipe] : null}
+        recipe={showRecipe !== null ? RECIPES[showRecipe] : null}
       />
     </div>
   );
@@ -116,12 +120,12 @@ function RecipeList({ recipes, setShowRecipe, scrollRef }) {
   }
   return (
     <div className="RecipeList" ref={scrollRef}>
-      {recipes.map((recipe, index) => (
+      {recipes.map(({ id, ...recipe }) => (
         <RecipeCard
-          key={index}
+          key={id}
           recipe={recipe}
           onClick={() => {
-            setShowRecipe(index);
+            setShowRecipe(id);
           }}
         />
       ))}
