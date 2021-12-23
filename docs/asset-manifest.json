@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/kovach-family-cookbook/static/css/main.44f46889.css",
-    "main.js": "/kovach-family-cookbook/static/js/main.12d920be.js",
+    "main.js": "/kovach-family-cookbook/static/js/main.7dcd03b5.js",
     "static/js/787.dbbea5d8.chunk.js": "/kovach-family-cookbook/static/js/787.dbbea5d8.chunk.js",
     "static/media/kfc-banner.svg": "/kovach-family-cookbook/static/media/kfc-banner.0e1c6c2db85e7a4d59164e58d530ea8e.svg",
     "index.html": "/kovach-family-cookbook/index.html",
     "static/media/search.svg": "/kovach-family-cookbook/static/media/search.5e903a48a92074d609d7857d1df33100.svg",
     "static/media/arrow-back.svg": "/kovach-family-cookbook/static/media/arrow-back.dee967831b0800bf5c2436e6d47f3fa7.svg",
     "main.44f46889.css.map": "/kovach-family-cookbook/static/css/main.44f46889.css.map",
-    "main.12d920be.js.map": "/kovach-family-cookbook/static/js/main.12d920be.js.map",
+    "main.7dcd03b5.js.map": "/kovach-family-cookbook/static/js/main.7dcd03b5.js.map",
     "787.dbbea5d8.chunk.js.map": "/kovach-family-cookbook/static/js/787.dbbea5d8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.44f46889.css",
-    "static/js/main.12d920be.js"
+    "static/js/main.7dcd03b5.js"
   ]
 }
